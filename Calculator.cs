@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+//using System.Math;
 
 namespace Lab1
 {
@@ -48,6 +49,23 @@ namespace Lab1
             Console.WriteLine("Ans: (" + x + "/" + y + ")=" + (x / y));
         }
 
+        public void Pow()
+        {
+            Console.Write("Number :");
+            this.x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Power :");
+            this.y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ans: (" + x + " to the power of " + y + ")=" + Math.Pow(x,y));
+        }
+
+        public void Sqrt()
+        {
+            Console.Write("Number :");
+            this.x = Convert.ToInt32(Console.ReadLine());
+             
+            Console.WriteLine("Ans: (Squre root of "+ x + ")=" + Math.Sqrt(x));
+        }
         
     }
 
@@ -61,7 +79,7 @@ namespace Lab1
             
             do
             {
-                Console.WriteLine("\nWhich option you wanna use:\n 1)Add\n 2)Substaction\n 3)Multiplication\n 4)Division");
+                Console.WriteLine("\nWhich option you wanna use:\n 1)Add\n 2)Substaction\n 3)Multiplication\n 4)Division\n 5)Squre Root\n 6)Power");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -77,6 +95,12 @@ namespace Lab1
                         break;
                     case 4:
                         obj.Div();
+                        break;
+                    case 5:
+                        obj.Sqrt();
+                        break;
+                    case 6:
+                        obj.Pow();
                         break;
                     default:
                         Console.WriteLine("Use proper option");
